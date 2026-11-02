@@ -1,0 +1,28 @@
+# cost-per-decade
+
+Buy-it-for-life arithmetic: cost per decade, cost per use, and the
+year the cheap option stops being the bargain.
+
+Sticker price is a bad comparator when lifespans differ. A $40 item
+replaced every two years outruns a $280 item that lasts twenty: $140
+per decade against $200, and the forty-dollar stack needs fifteen
+units to cover thirty years.
+
+The package follows the cost-per-decade method used on
+[Durable Picks](https://www.durablepicks.com). It depends only on base.
+
+## Example
+
+A $280 durable item with a 20-year expected life, a $40 alternative
+that lasts 2 years, a 25-year warranty, and 150 uses a year:
+
+* cost per decade: `costPerDecade 280 20` = $140.00
+* cost per use: `costPerUse 280 20 150` = $0.0933
+* warranty: `warrantyClass 25 20` = covered for life (25y warranty on 20y expected life)
+* 30-year horizon: durable = 2 purchases, $560 total; cheap = 15 purchases, $600 total
+* break-even: `breakEvenYear 280 20 40 2 30` = year 12
+
+The cheap stack hits $280 at year 12, the same year it takes its
+seventh unit. From there the durable option saves $40 across the
+thirty-year window, and the warranty outlives the item instead of
+covering a fraction of it.
